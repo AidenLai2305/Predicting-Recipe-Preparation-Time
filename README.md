@@ -1,2 +1,39 @@
-# Predicting-Recipe-Preparation-Time
-This repository explores the relationship between recipe attributes and preparation time. Using statistical analysis and machine learning, we predict recipe duration based on ingredients and step count. Developed as part of DSC 80 at UCSD.
+# How Long Will It Take?: Predicting Recipe Duration with Data
+
+by Aiden Lai and Leander Goessling
+
+---
+
+## Introduction
+
+In this project, we studied the effectiveness of spice challenges in building team morale.
+
+---
+
+## Data Cleaning and Exploratory Data Analysis
+
+---
+
+## Assessment of Missingness
+
+---
+
+## Hypothesis Testing
+
+---
+
+## Framing a Prediction Problem
+
+---
+
+## Baseline Model
+
+---
+
+## Final Model
+
+---
+
+## Fairness Analysis
+
+---
