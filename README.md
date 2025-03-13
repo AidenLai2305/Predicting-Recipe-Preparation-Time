@@ -34,6 +34,8 @@ Our first dataset, `recipe`, contains 83782 rows, each corresponding to a unique
 | `n_steps`     | Number of steps in recipe |
 | `steps`       | Text for recipe steps, in order |
 | `description` | User-provided description |
+| `ingredients`     | Text for recipe ingredients |
+| `n_ingredients`       | Number for ingredients in recipe |
 
 ---
 
@@ -49,9 +51,7 @@ Our second dataset, 'interactions', contains 731927 rows, relating to a review f
 | `rating`   | Rating given |
 | `review`   | Review text |
 
-
-
-
+As our project pertains to the time it would take to complete the recipe, the columns that are relevant to our question are mainly 'minutes', 'tags', 'n_steps', and 'n_ingredients'. We are assuming that more steps and more ingredients would correlate to increased cooking time as there are more factors and hoops to jump through. Recipe tags such as "30-minutes-or-less" hint towards specified cook times. Using the data from these columns, we hope to discover patterns hidden inside the metadata which can generate accurate predictions.
 
 ---
 
