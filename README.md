@@ -151,8 +151,8 @@ Next, we ran a permutation test with 1000 iterations to explore the missingness 
 
 <iframe
   src="assets/empirical_steps.html"
-  width="1000"
-  height="420"
+  width="1100"
+  height="440"
   frameborder="0"
   display="block"
 ></iframe> 
@@ -181,8 +181,8 @@ For this plot we filtered minutes to be less than 1000 as outliers made the grap
 
 <iframe
   src="assets/empirical_minutes.html"
-  width="1000"
-  height="420"
+  width="1100"
+  height="440"
   frameborder="0"
   display="block"
 ></iframe> 
