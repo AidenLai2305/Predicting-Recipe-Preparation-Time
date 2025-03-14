@@ -229,7 +229,7 @@ Both `n_steps` and `n_ingredients` are quantitative variables, so no ordinal enc
 ### Model Performance
   - Mean Absolute Error (MAE): 122.97 → On average, the model's predictions are off by about 123 minutes.
   - Root Mean Squared Error (RMSE): 962.81 → Higher errors are significantly penalized, suggesting some extreme prediction errors.
-  - R Squared: 0.0013435067205547213 → Very poor performance in terms of accurate predictions.
+  - R²: 0.0013435067205547213 → Very poor performance in terms of accurate predictions.
 
 Based on the high MAE and RMSE, the model does not seem very effective.
 The large RMSE suggests high variance, meaning some predictions are significantly incorrect.
