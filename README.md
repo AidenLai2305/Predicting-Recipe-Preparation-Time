@@ -83,7 +83,7 @@ For the univariate analysis, we explored the calorie counts in the recipes. The 
 <iframe
   src="assets/calorie_histogram.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
   display="block"
 ></iframe> 
@@ -93,7 +93,7 @@ For the bivariate analysis, we explored the relationship between the number of i
 <iframe
   src="assets/timexingredients_dot.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
   display="block"
 ></iframe> 
@@ -142,7 +142,7 @@ We first measured the dependency of the missingness of the `rating` column on th
 <iframe
   src="assets/steps_missingness.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
   display="block"
 ></iframe> 
@@ -152,7 +152,7 @@ Next, we ran a permutation test with 1000 iterations to explore the missingness 
 <iframe
   src="assets/empirical_steps.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
   display="block"
 ></iframe> 
@@ -172,7 +172,7 @@ We then measured the dependency of the missingness of the `rating` column on the
 <iframe
   src="assets/minutes_missingness.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
   display="block"
 ></iframe> 
@@ -182,7 +182,7 @@ For this plot we filtered minutes to be less than 1000 as outliers made the grap
 <iframe
   src="assets/empirical_minutes.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
   display="block"
 ></iframe> 
