@@ -114,30 +114,7 @@ We grouped the recipes by `n_ingredients`) and calculated three statistics:
 |               5 |         65.8771 |        331.26  |          20250 |
 |               6 |         76.0415 |        357.845 |          21058 |
 |               7 |         73.9363 |        393.29  |          24406 |
-|               8 |         71.3182 |        383.002 |          25553 |
-|               9 |         86.2598 |        416.447 |          24716 |
-|              10 |         79.7412 |        435.213 |          21367 |
-|              11 |         78.4237 |        468.779 |          18833 |
-|              12 |         82.4216 |        464.954 |          14929 |
-|              13 |         89.5363 |        484.344 |          12275 |
-|              14 |         94.4784 |        514.04  |           8415 |
-|              15 |         99.8167 |        552.521 |           6433 |
-|              16 |         86.6691 |        609.078 |           4594 |
-|              17 |        290.372  |        554.704 |           3005 |
-|              18 |        123.834  |        617.204 |           1975 |
-|              19 |        130.597  |        585.077 |           1216 |
-|              20 |        126.633  |        662.043 |           1053 |
-|              21 |        139.584  |        778.759 |            563 |
-|              22 |        190.464  |        701.687 |            619 |
-|              23 |        172.716  |        660.945 |            313 |
-|              24 |        116.892  |        591.681 |            176 |
-|              25 |        132.883  |        766.61  |             60 |
-|              26 |         88.08   |        840.441 |            100 |
-|              27 |       1033.04   |       1301.2   |             45 |
-|              28 |        127.209  |        670.14  |             43 |
-|              29 |         65.2581 |        880.897 |             31 |
-|              30 |        106.939  |        678.464 |             33 |
-|              31 |        130.769  |        872.454 |             13 |
+|               ... |         ... |        ... |          ...  |
 |              32 |         60      |        864.475 |              4 |
 |              33 |         35      |        338.2   |              1 |
 |              37 |        240      |      10687.7   |              1 |
@@ -149,6 +126,47 @@ The table reveals that recipes with fewer ingredients (1-5) generally have lower
 
 ## Assessment of Missingness
 
+### NMAR Analysis
+
+The columns with the most missing values are `rate`, `rating`, and `review`. I believe that the `rating` column may be NMAR because unrated recipes may be new or unpopular since no one is willing to try them. It also may be that users prefer not to rate recipes if they had a bad experience. The lack of responses would cause many missing values.
+
+### Missingness Dependency
+
+We first measured the dependency of the missingness of the `rating` column on the `n_steps` column. It may be possible that recipes with a lot of steps may deter users, and may result in no ratings.
+
+**Null Hypothesis:** The missingness of ratings does not depend on the number of steps per recipe.
+
+**Alternative Hypothesis:** The missingness of ratings depends on the number of steps per recipe.
+
+**Test Statistic:** The absolute difference of mean in the proportion of missing values from ratings and minutes.
+
+<iframe
+  src="assets/steps_missingness.html"
+  width="800"
+  height="600"
+  frameborder="0"
+  display="block"
+></iframe> 
+
+
+
+We measured the dependency of the missingness of the `rating` column on the `minutes` column. It may be possible that extremely long recipes may cause people to not try a recipe, and therefore there will be no ratings.
+
+**Null Hypothesis:** The missingness of ratings does not depend on the amount of minutes per recipe.
+
+**Alternative Hypothesis:** The missingness of ratings depends on the amount of minutes per recipe.
+
+**Test Statistic:** The absolute difference of mean in the proportion of missing values from ratings and minutes.
+
+**Significance Level:** 0.05
+
+<iframe
+  src="assets/minutes_missingness.html"
+  width="800"
+  height="600"
+  frameborder="0"
+  display="block"
+></iframe> 
 ---
 
 ## Hypothesis Testing
