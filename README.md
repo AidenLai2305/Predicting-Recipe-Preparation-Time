@@ -148,9 +148,19 @@ We first measured the dependency of the missingness of the `rating` column on th
   display="block"
 ></iframe> 
 
+Next, we ran a permutation test with 1000 iterations to explore the missingness between steps and rating.
 
+<iframe
+  src="assets/empirical_steps.html"
+  width="800"
+  height="600"
+  frameborder="0"
+  display="block"
+></iframe> 
 
-We measured the dependency of the missingness of the `rating` column on the `minutes` column. It may be possible that extremely long recipes may cause people to not try a recipe, and therefore there will be no ratings.
+From our p-value of 0, we can see that we will reject the null hypothesis, suggesting that the missingness of values depends on the number of steps.
+
+We then measured the dependency of the missingness of the `rating` column on the `minutes` column. It may be possible that extremely long recipes may cause people to not try a recipe, and therefore there will be no ratings.
 
 **Null Hypothesis:** The missingness of ratings does not depend on the amount of minutes per recipe.
 
@@ -167,6 +177,19 @@ We measured the dependency of the missingness of the `rating` column on the `min
   frameborder="0"
   display="block"
 ></iframe> 
+
+For this plot we filtered minutes to be less than 1000 as outliers made the graph difficult to interpret. Then, we ran another permutation test with 1000 iterations to explore the missingness between minutes and rating.
+
+<iframe
+  src="assets/empirical_minutes.html"
+  width="800"
+  height="600"
+  frameborder="0"
+  display="block"
+></iframe> 
+
+Since our p value (0.117) is larger than the significance level of alpha = 0.05, we fail to reject the null, it seems that the missingness of rating does not depend on the number of minutes the recipe takes.
+
 ---
 
 ## Hypothesis Testing
