@@ -18,9 +18,8 @@ Our project focuses on predicting recipe time based on metadata, using data scie
 
 Our first dataset, `recipe`, contains 83782 rows, each corresponding to a unique recipe, along with 10 columns related to the following information:
 
-## Recipe Dataset
+### Recipe Dataset
 
-### Recipe Metadata
 
 | Column          | Description  |
 |----------------|-------------|
@@ -57,7 +56,7 @@ As our project pertains to the time it would take to complete the recipe, the co
 
 ## Data Cleaning and Exploratory Data Analysis
 
-# Data Cleaning
+### Data Cleaning
 1. Applied a left merge on `id` and `recipe_id`.
   - Viewing data is easier with one collective data set as we can see recipes along with their ratings and reviews.
 2. Replaced all ratings of 0 with np.nan
@@ -77,9 +76,11 @@ Our resulting dataframe had 234429 rows and 23 columns, after cleaning. Below is
 | 412 broccoli casserole               | 306168 |        40 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'side-dishes', 'vegetables', 'easy', 'beginner-cook', 'broccoli']                                                                        |         6 | ['frozen broccoli cuts', 'cream of chicken soup', 'sharp cheddar cheese', 'garlic powder', 'ground black pepper', 'salt', 'milk', 'soy sauce', 'french-fried onions']          |               9 |             5 |
 | 412 broccoli casserole               | 306168 |        40 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'side-dishes', 'vegetables', 'easy', 'beginner-cook', 'broccoli']                                                                        |         6 | ['frozen broccoli cuts', 'cream of chicken soup', 'sharp cheddar cheese', 'garlic powder', 'ground black pepper', 'salt', 'milk', 'soy sauce', 'french-fried onions']          |               9 |             5 |
 
-# Univariate Analysis
+### Univariate Analysis
 
-# Bivariate Analysis
+
+
+### Bivariate Analysis
 
 ---
 
