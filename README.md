@@ -255,7 +255,7 @@ In a similar vein, we looked at the steps and checked whether there were time cu
 
 Linear regression was not the best predictor for our data, so we switched to using a **random forest regression model**. Random forest allows us to train many different models and aggregate over them to get a better model with lower variance.
 
-We used grid search to find the best hyperparameters. ***&*&describe best hyperparamters.** 
+We used grid search to find the best hyperparameters. **describe best hyperparamters.** 
 
 Our metrics, MAE and RMSE, saw big improvements after altering our features and model type. Both of the scoring statistics went down drastically, especially MAE, which decreased by over 50%. 
 
@@ -263,7 +263,7 @@ Our metrics, MAE and RMSE, saw big improvements after altering our features and 
 
 ## Fairness Analysis
 
-For our two groups we choose **Group X** and ** Group Y**. Our evaluation metric was based on **metric** because **insert reason**.
+For our two groups we choose **Group X** and **Group Y**. Our evaluation metric was based on **metric** because **insert reason**.
 
 **Null Hypothesis:**
 
