@@ -266,16 +266,18 @@ Our metrics, MAE and RMSE, saw big improvements after altering our features and 
 
 ## Fairness Analysis
 
-For our two groups we choose **Group X** and **Group Y**. Our evaluation metric was based on **metric** because **insert reason**.
+For our two groups we choose recipes **with** the “60-minutes-or-less” tag and recipes **without** the “60-minutes-or-less” tag. Our evaluation metric was based on absolute difference in r^2 because this is a good overall scoring metric to see how much of the variance in our target variable is explained by our model.
 
-**Null Hypothesis:**
+**Null Hypothesis:** Our model is fair. R^2 for recipes that have the "60-minutes-or-less" tag is the same as recipes that don't have it. This means our model is fair for predicting roughly hour long recipes as opposed to other recipes.
 
-**Alternative Hypothesis:**
+**Alternative Hypothesis:** Our model is unfair. The R^2 for hour-long recipes is different from the R^2 for all other recipes.
 
-**Test Statistic:**
+**Test Statistic:** Absolute Difference in R^2
 
 **Significance Level:**  0.05
 
-After running our permutation test X times, we received a p-value of X, so that we reject/fail to reject the null, meaning that there is **conclusion**.
+After running our permutation test 1000 times, we received a p-value of 0.0, so that we reject the null, meaning that there is a difference between the accuracy of the predictions that our model makes for roughly hour long recipes and all other recipes.
+
+
 
 ---
