@@ -268,6 +268,7 @@ Linear regression was not the best predictor for our data, so we switched to usi
 We used grid search to find the best hyperparameters. The hyperparameters that ended up being the best were a maximum depth of 20 as well as using forests of 100 trees.
 
 We used a couple of metrics to score our models, mean absolute error (MAE), root mean squared error (RMSE), and R^2. All of our scoring statistics improved drastically.
+
 | Metric                      | Baseline Model | Final Model  |
 |-----------------------------|---------------|-------------|
 | Mean Absolute Error (MAE)   | 122.97        | 29.34       |
