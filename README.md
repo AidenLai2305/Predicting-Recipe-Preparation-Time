@@ -273,6 +273,6 @@ For our two groups we choose **Group X** and ** Group Y**. Our evaluation metric
 
 **Significance Level:**  0.05
 
-After running our permutation test X times, we recieved a p-value of X, so that we reject/fail to reject the null, meaning that there is **conclusion**.
+After running our permutation test X times, we received a p-value of X, so that we reject/fail to reject the null, meaning that there is **conclusion**.
 
 ---
