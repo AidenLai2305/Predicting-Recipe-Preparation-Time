@@ -242,15 +242,19 @@ One possible reason for this poor performance is that recipe preparation time mi
 On top of `n_steps` and `n_ingredients`, we added some new features for our improved model. The new features that we added were all binary features about the `tags` and the `steps`.
 
  `n_steps`
+ 
  The total number of steps in the recipe.
  
 `n_ingredients`
+
 The total number of ingredients used in the recipe.
 
 `tags`
+
 We noticed that some of the tags were "15-minutes-or-less", "30-minutes-or-less", and "60-minutes-or-less". We made 3 new features that were each binary as to whether the tags contained one of the mentioned tags. We figured these would be good features to add because they give you an upper bound of the amount of time that a recipe will take.
 
 `steps`
+
 In a similar vein, we looked at the steps and checked whether there were time cues in them. Now we already have a pretty good idea of how many minutes a recipe could take, but not much if it takes longer than that. That is why we looked at the steps and checked if they contained the words “hour” or “day”. We figured these would be good features because often a recipe might call for something like, “put the cake in the oven for 1.5-2 hours” or “let the chicken marinate in the fridge for at least a day”. Once again, we binarized these features in our regression model. Unlike the previous features, these serve as a lower bound for time, but still very helpful for predicting how long a recipe will take more accurately.
 
 Linear regression was not the best predictor for our data, so we switched to using a **random forest regression model**. Random forest allows us to train many different models and aggregate over them to get a better model with lower variance.
