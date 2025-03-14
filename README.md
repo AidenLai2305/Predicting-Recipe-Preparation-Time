@@ -211,9 +211,11 @@ Our model plans to predict the **number of minutes to complete** for a recipe, w
 
 We evaluated the model using:
 1. Mean Absolute Error (MAE): Measures the average absolute differences between predicted and actual values. It is useful because it is interpretable in the same units as the target variable.
-2. Root Mean Squared Error (RMSE): This penalizes larger errors more than MAE, making it sensitive to outliers.
+2. R^2: This tells us the proportiong of variance in minutes that is accounted for by our model, showing how good of a fit our model is
 
-We choose these metrics over others because MAE gives a straightforward measure of average error magnitude, RMSE is useful for understanding larger deviations in predictions, and accuracy is not applicable in regression since it is meant for classification problems.
+We choose these metrics over others because MAE gives a straightforward measure of average error magnitude, R^2 is good for generally telling how good of a fit a regression model is, and stats like RMSE are very sensitive to outliers.
+
+We are trying to predict how long it would take us to make a recipe, so all of the information we are using is everything you would be able to find while looking at a recipe except for the number of minutes the recipe says. This includes all of the steps, which may have clues as to how long it takes (20 minutes in the oven, for example) and any tags that the creator of the recipe has put on the recipe, which include things like "60-minutes-or-less"
 
 ---
 
@@ -228,7 +230,6 @@ Both `n_steps` and `n_ingredients` are quantitative variables, so no ordinal enc
 
 ### Model Performance
   - Mean Absolute Error (MAE): 122.97 → On average, the model's predictions are off by about 123 minutes.
-  - Root Mean Squared Error (RMSE): 962.81 → Higher errors are significantly penalized, suggesting some extreme prediction errors.
   - R²: 0.0013435067205547213 → Very poor performance in terms of accurate predictions.
 
 Based on the high MAE and RMSE, the model does not seem very effective.
@@ -273,7 +274,6 @@ We used a couple of metrics to score our models, mean absolute error (MAE), root
 | Metric                      | Baseline Model | Final Model  |
 |-----------------------------|---------------|-------------|
 | Mean Absolute Error (MAE)   | 122.97        | 29.34       |
-| Root Mean Squared Error (RMSE) | 962.81    | 100.94      |
 | R²                          | 0.0013        | 0.4362      |
 
 ---
