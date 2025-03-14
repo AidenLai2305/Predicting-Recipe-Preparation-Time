@@ -232,8 +232,8 @@ Both `n_steps` and `n_ingredients` are quantitative variables, so no ordinal enc
   - Mean Absolute Error (MAE): 122.97 → On average, the model's predictions are off by about 123 minutes.
   - R²: 0.0013435067205547213 → Very poor performance in terms of accurate predictions.
 
-Based on the high MAE and RMSE, the model does not seem very effective.
-The large RMSE suggests high variance, meaning some predictions are significantly incorrect.
+Based on the high MAE and low R², the model does not seem very effective.
+The extremely low R² suggests that our model is predicting nearly none of the variance in `minutes` column
 One possible reason for this poor performance is that recipe preparation time might depend on more factors than just the number of steps and ingredients.
 
 ---
@@ -269,7 +269,7 @@ Linear regression was not the best predictor for our data, so we switched to usi
 
 We used grid search to find the best hyperparameters. The hyperparameters that ended up being the best were a maximum depth of 20 as well as using forests of 100 trees.
 
-We used a couple of metrics to score our models, mean absolute error (MAE), root mean squared error (RMSE), and R^2. All of our scoring statistics improved drastically.
+We used a couple of metrics to score our models, mean absolute error (MAE) and R^2. Both of our scoring statistics improved drastically.
 
 | Metric                      | Baseline Model | Final Model  |
 |-----------------------------|---------------|-------------|
