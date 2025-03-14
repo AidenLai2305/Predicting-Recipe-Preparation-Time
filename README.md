@@ -85,8 +85,7 @@ For the univariate analysis, we explored the calorie counts in the recipes. The 
   width="800"
   height="600"
   frameborder="0"
-></iframe>
-### Bivariate Analysis
+></iframe> ### Bivariate Analysis
 
 For the bivariate analysis, we explored the relationship between the number of ingredients and the time it took to complete the recipe. This is important to our question as it may hint towards our ability to make accurate predictions. It seems to be slightly skewed right, but for the most part it seems very scattered. Additionally, it would make  sense for recipes with more ingredients to take longer, but it does not appear that way.
 
@@ -95,8 +94,7 @@ For the bivariate analysis, we explored the relationship between the number of i
   width="800"
   height="600"
   frameborder="0",
-></iframe>
-### Interesting Aggregates
+></iframe> ### Interesting Aggregates
 
 We grouped the recipes by `n_ingredients`) and calculated three statistics:  
 1. Average preparation time – The mean time (in minutes) required to prepare recipes with a given number of ingredients.  
