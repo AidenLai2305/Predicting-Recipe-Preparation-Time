@@ -86,6 +86,7 @@ For the univariate analysis, we explored the calorie counts in the recipes. The 
   height="600"
   frameborder="0"
   display="block"
+  style="margin-bottom: 10px;"
 ></iframe> 
 ### Bivariate Analysis
 
