@@ -86,7 +86,6 @@ For the univariate analysis, we explored the calorie counts in the recipes. The 
   height="600"
   frameborder="0"
 ></iframe>
-
 ### Bivariate Analysis
 
 For the bivariate analysis, we explored the relationship between the number of ingredients and the time it took to complete the recipe. This is important to our question as it may hint towards our ability to make accurate predictions. It seems to be slightly skewed right, but for the most part it seems very scattered. Additionally, it would make  sense for recipes with more ingredients to take longer, but it does not appear that way.
@@ -97,6 +96,52 @@ For the bivariate analysis, we explored the relationship between the number of i
   height="600"
   frameborder="0"
 ></iframe>
+### Interesting Aggregates
+
+We grouped the recipes by `n_ingredients`) and calculated three statistics:  
+1. Average preparation time – The mean time (in minutes) required to prepare recipes with a given number of ingredients.  
+2. Average calorie count – The mean calorie content of recipes with that ingredient count.  
+3. Recipe count – The number of recipes that fall into each ingredient category.  
+
+|   n_ingredients |   avg_prep_time |   avg_calories |   recipe_count |
+|----------------:|----------------:|---------------:|---------------:|
+|               1 |         36.375  |       1151.86  |             96 |
+|               2 |       1315      |        395.96  |           2336 |
+|               3 |        184.586  |        283.122 |           7157 |
+|               4 |        222.684  |        305.826 |          12760 |
+|               5 |         65.8771 |        331.26  |          20250 |
+|               6 |         76.0415 |        357.845 |          21058 |
+|               7 |         73.9363 |        393.29  |          24406 |
+|               8 |         71.3182 |        383.002 |          25553 |
+|               9 |         86.2598 |        416.447 |          24716 |
+|              10 |         79.7412 |        435.213 |          21367 |
+|              11 |         78.4237 |        468.779 |          18833 |
+|              12 |         82.4216 |        464.954 |          14929 |
+|              13 |         89.5363 |        484.344 |          12275 |
+|              14 |         94.4784 |        514.04  |           8415 |
+|              15 |         99.8167 |        552.521 |           6433 |
+|              16 |         86.6691 |        609.078 |           4594 |
+|              17 |        290.372  |        554.704 |           3005 |
+|              18 |        123.834  |        617.204 |           1975 |
+|              19 |        130.597  |        585.077 |           1216 |
+|              20 |        126.633  |        662.043 |           1053 |
+|              21 |        139.584  |        778.759 |            563 |
+|              22 |        190.464  |        701.687 |            619 |
+|              23 |        172.716  |        660.945 |            313 |
+|              24 |        116.892  |        591.681 |            176 |
+|              25 |        132.883  |        766.61  |             60 |
+|              26 |         88.08   |        840.441 |            100 |
+|              27 |       1033.04   |       1301.2   |             45 |
+|              28 |        127.209  |        670.14  |             43 |
+|              29 |         65.2581 |        880.897 |             31 |
+|              30 |        106.939  |        678.464 |             33 |
+|              31 |        130.769  |        872.454 |             13 |
+|              32 |         60      |        864.475 |              4 |
+|              33 |         35      |        338.2   |              1 |
+|              37 |        240      |      10687.7   |              1 |
+
+
+The table reveals that recipes with fewer ingredients (1-5) generally have lower average preparation times, though some inconsistencies suggest potential data issues. The average calorie count tends to increase as the number of ingredients rises, which makes sense since more ingredients likely contribute to a higher calorie content.
 
 ---
 
