@@ -1,4 +1,4 @@
-# How Long Will It Take?: Predicting Recipe Duration with Data
+# How Long Will It Take? Predicting Recipe Duration with Data
 
 by Aiden Lai and Leander Goessling
 
