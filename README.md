@@ -82,7 +82,7 @@ For the univariate analysis, we explored the calorie counts in the recipes. The 
 
 <iframe
   src="assets/calorie_histogram.html"
-  width="800"
+  width="1000"
   height="420"
   frameborder="0"
   display="block"
@@ -92,7 +92,7 @@ For the univariate analysis, we explored the calorie counts in the recipes. The 
 For the bivariate analysis, we explored the relationship between the number of ingredients and the time it took to complete the recipe. This is important to our question as it may hint towards our ability to make accurate predictions. It seems to be slightly skewed right, but for the most part it seems very scattered. Additionally, it would make  sense for recipes with more ingredients to take longer, but it does not appear that way.
 <iframe
   src="assets/timexingredients_dot.html"
-  width="800"
+  width="1000"
   height="420"
   frameborder="0"
   display="block"
@@ -141,7 +141,7 @@ We first measured the dependency of the missingness of the `rating` column on th
 
 <iframe
   src="assets/steps_missingness.html"
-  width="800"
+  width="1000"
   height="420"
   frameborder="0"
   display="block"
@@ -151,7 +151,7 @@ Next, we ran a permutation test with 1000 iterations to explore the missingness 
 
 <iframe
   src="assets/empirical_steps.html"
-  width="800"
+  width="1000"
   height="420"
   frameborder="0"
   display="block"
@@ -171,7 +171,7 @@ We then measured the dependency of the missingness of the `rating` column on the
 
 <iframe
   src="assets/minutes_missingness.html"
-  width="800"
+  width="1000"
   height="420"
   frameborder="0"
   display="block"
@@ -181,7 +181,7 @@ For this plot we filtered minutes to be less than 1000 as outliers made the grap
 
 <iframe
   src="assets/empirical_minutes.html"
-  width="800"
+  width="1000"
   height="420"
   frameborder="0"
   display="block"
