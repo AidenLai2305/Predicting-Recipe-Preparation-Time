@@ -238,6 +238,8 @@ One possible reason for this poor performance is that recipe preparation time mi
 
 ## Final Model
 
+### Features
+
 On top of `n_steps` and `n_ingredients`, we added some new features for our improved model. The new features that we added were all binary features about the `tags` and the `steps`.
 
  `n_steps`
@@ -250,19 +252,20 @@ The total number of ingredients used in the recipe.
 
 `tags`
 
-We noticed that some of the tags were "15-minutes-or-less", "30-minutes-or-less", and "60-minutes-or-less". We made 3 new features that were each binary as to whether the tags contained one of the mentioned tags. We figured these would be good features to add because they give you an upper bound of the amount of time that a recipe will take.
+We noticed that some of the tags were "15-minutes-or-less", "30-minutes-or-less", and "60-minutes-or-less". We made 3 new binary features, pointing to whether the tags contained one of the mentioned tags. We figured these would be good features to add because they give you an upper bound of the amount of time that a recipe will take.
 
 `steps`
 
 In a similar vein, we looked at the steps and checked whether there were time cues in them. Now we already have a pretty good idea of how many minutes a recipe could take, but not much if it takes longer than that. That is why we looked at the steps and checked if they contained the words “hour” or “day”. We figured these would be good features because often a recipe might call for something like, “put the cake in the oven for 1.5-2 hours” or “let the chicken marinate in the fridge for at least a day”. Once again, we binarized these features in our regression model. Unlike the previous features, these serve as a lower bound for time, but still very helpful for predicting how long a recipe will take more accurately.
 
-**outliers**
-Lastly, we noticed that there were a lot of recipes that took an absurdly long amount of time, and when we investigated this, we found recipes with descriptions such as “how to preserve a husband”, which took over 1,000,000 minutes. To remedy this, we filtered recipes to only include recipes that were less than 2,000 minutes as this would still allow for recipes that took longer than a day, but would exclude all of the recipes that took an absurdly long amount of time. This was actually one of the best changes to improve the accuracy of our model and we feel as though it still kept the integrity of the model as the purpose of our model was to predict food recipes that we would feel comfortable cooking at home.
+### Outliers
+
+Lastly, we noticed that there were a lot of recipes that took an absurdly long amount of time, and when we investigated this, we found recipes with descriptions such as “how to preserve a husband”, which took over 1,000,000 minutes. To remedy this, we filtered recipes to only include recipes that were less than 2,000 minutes as this would still allow for recipes that took longer than a day, but would exclude all of the recipes that took an absurdly long amount of time. This was actually one of the best changes to improve the accuracy of our model and we feel as though it still kept the integrity of the model, as the purpose of our model was to predict food recipes that we would feel comfortable cooking at home.
 
 
 Linear regression was not the best predictor for our data, so we switched to using a **random forest regression model**. Random forest allows us to train many different models and aggregate over them to get a better model with lower variance.
 
-We used grid search to find the best hyperparameters. The hyperparameters that ended up being the best was a maximum depth of 20 as well as using forests of 100 trees.
+We used grid search to find the best hyperparameters. The hyperparameters that ended up being the best were a maximum depth of 20 as well as using forests of 100 trees.
 
 We used a couple of metrics to score our models, mean absolute error (MAE), root mean squared error (RMSE), and R^2. All of our scoring statistics improved drastically.
 | Metric                      | Baseline Model | Final Model  |
@@ -276,9 +279,9 @@ We used a couple of metrics to score our models, mean absolute error (MAE), root
 
 ## Fairness Analysis
 
-For our two groups we choose recipes **with** the “60-minutes-or-less” tag and recipes **without** the “60-minutes-or-less” tag. Our evaluation metric was based on absolute difference in r^2 because this is a good overall scoring metric to see how much of the variance in our target variable is explained by our model.
+For our two groups, we chose recipes **with** the “60-minutes-or-less” tag and recipes **without** the “60-minutes-or-less” tag. Our evaluation metric was based on absolute difference in r^2 because this is a good overall scoring metric to see how much of the variance in our target variable is explained by our model.
 
-**Null Hypothesis:** Our model is fair. R^2 for recipes that have the "60-minutes-or-less" tag is the same as recipes that don't have it. This means our model is fair for predicting roughly hour long recipes as opposed to other recipes.
+**Null Hypothesis:** Our model is fair. R^2 for recipes that have the "60-minutes-or-less" tag is the same as recipes that don't have it. This means our model is fair for predicting roughly hour-long recipes as opposed to other recipes.
 
 **Alternative Hypothesis:** Our model is unfair. The R^2 for hour-long recipes is different from the R^2 for all other recipes.
 
@@ -286,11 +289,11 @@ For our two groups we choose recipes **with** the “60-minutes-or-less” tag a
 
 **Significance Level:**  0.05
 
-After running our permutation test 1000 times, we received a p-value of 0.0, so that we reject the null, meaning that there is a difference between the accuracy of the predictions that our model makes for roughly hour long recipes and all other recipes.
+After running our permutation test 1000 times, we received a p-value of 0.0, so we reject the null, meaning that there is a difference between the accuracy of the predictions that our model makes for roughly hour long recipes and all other recipes.
 
 <iframe
   src="assets/fairness_permutation.html"
-  width="900"
+  width="1000"
   height="440"
   frameborder="0"
   display="block"
