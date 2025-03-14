@@ -78,6 +78,14 @@ Our resulting dataframe had 234429 rows and 23 columns, after cleaning. Below is
 
 ### Univariate Analysis
 
+For the univariate analysis, we explored the calorie counts in the recipes. The plot is skewed right, and we even had to remove some outliers. This indicates that most recipes have a calorie count around the 150 range, with some recipes having an extreme amount.
+
+<iframe
+  src="assets/calorie_histogram.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 ### Bivariate Analysis
