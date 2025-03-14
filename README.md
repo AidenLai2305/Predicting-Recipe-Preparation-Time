@@ -194,13 +194,46 @@ Since our p value (0.117) is larger than the significance level of alpha = 0.05,
 
 ## Hypothesis Testing
 
+**Null Hypothesis:** The mean preparation time for recipes with more than 10 ingredients is the same as those with 10 or fewer ingredients.
+
+**Alternative Hypothesis:** Recipes with more than 10 ingredients take longer to prepare on average than those with 10 or fewer ingredients.
+
+**Test Statistic:** Absolute difference in means between recipes with more than 10 ingredients and the mean of those with less than 10.
+
+**Significance Level:** 0.05
+
+After running a permutation test of 1000 iterations, we received a p-value of 0.522. From this, we fail to reject the null, meaning that there is no significant difference in ratings between chicken and non-chicken recipes. As a result of this test, we realize that predicting cooking time based on the number of ingredients may prove to be difficult, and may need to look for more variables or other options.
+
 ---
 
 ## Framing a Prediction Problem
 
+Our model plans to predict the **number of minutes to complete** for a recipe, which is a **regression problem** because "minutes" is a continuous variable. We chose this variable because predicting preparation time is crucial for meal planning and can help users determine how long a recipe might take before starting.
+
+We evaluated the model using:
+1. Mean Absolute Error (MAE): Measures the average absolute differences between predicted and actual values. It is useful because it is interpretable in the same units as the target variable.
+2. Root Mean Squared Error (RMSE): This penalizes larger errors more than MAE, making it sensitive to outliers.
+
+We choose these metrics over others because MAE gives a straightforward measure of average error magnitude, RMSE is useful for understanding larger deviations in predictions, and accuracy is not applicable in regression since it is meant for classification problems.
+
 ---
 
 ## Baseline Model
+
+### Model Features
+
+We built a Linear Regression model to predict the total preparation time (minutes) of a recipe using two features:
+  - Number of Steps (`n_steps`): The total number of steps in the recipe.
+  - Number of Ingredients (`n_ingredients`): The total number of ingredients used in the recipe.
+Both `n_steps` and `n_ingredients` are quantitative variables, so no ordinal encoding was required.
+
+### Model Performance
+  - Mean Absolute Error (MAE): 122.97 → On average, the model's predictions are off by about 123 minutes.
+  - Root Mean Squared Error (RMSE): 962.81 → Higher errors are significantly penalized, suggesting some extreme prediction errors.
+
+Based on the high MAE and RMSE, the model does not seem very effective.
+The large RMSE suggests high variance, meaning some predictions are significantly incorrect.
+One possible reason for this poor performance is that recipe preparation time might depend on more factors than just the number of steps and ingredients.
 
 ---
 
