@@ -294,7 +294,7 @@ After running our permutation test 1000 times, we received a p-value of 0.0, so 
 
 <iframe
   src="assets/fairness_permutation.html"
-  width="1000"
+  width="1100"
   height="440"
   frameborder="0"
   display="block"
