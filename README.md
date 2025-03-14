@@ -85,7 +85,7 @@ For the univariate analysis, we explored the calorie counts in the recipes. The 
   width="800"
   height="600"
   frameborder="0", 
-  style="margin-bottom: 5px;">
+  style="margin-bottom: 5px">
 ></iframe>
 ### Bivariate Analysis
 
@@ -96,7 +96,7 @@ For the bivariate analysis, we explored the relationship between the number of i
   width="800"
   height="600"
   frameborder="0",
-  style="margin-bottom: 5px;">
+  style="margin-bottom: 5px">
 ></iframe>
 ### Interesting Aggregates
 
