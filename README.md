@@ -201,7 +201,7 @@ Since our p value (0.117) is larger than the significance level of alpha = 0.05,
 
 **Significance Level:** 0.05
 
-After running a permutation test of 1000 iterations, we received a p-value of 0.522. From this, we fail to reject the null, meaning that there is no significant difference in ratings between chicken and non-chicken recipes. As a result of this test, we realize that predicting cooking time based on the number of ingredients may prove to be difficult, and may need to look for more variables or other options.
+After running a permutation test of 1000 iterations, we received a p-value of 0.522. From this, we fail to reject the null, meaning that there is no significant difference in ratings between low-step and high-step recipes. As a result of this test, we realize that predicting cooking time based on the number of ingredients may prove to be difficult, and may need to look for more variables or other options.
 
 ---
 
