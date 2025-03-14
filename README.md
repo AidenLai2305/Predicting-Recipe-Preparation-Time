@@ -275,7 +275,6 @@ We used a couple of metrics to score our models, mean absolute error (MAE), root
 | Root Mean Squared Error (RMSE) | 962.81    | 100.94      |
 | R²                          | 0.0013        | 0.4362      |
 
-
 ---
 
 ## Fairness Analysis
