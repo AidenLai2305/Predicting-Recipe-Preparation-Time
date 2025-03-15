@@ -233,8 +233,7 @@ Both `n_steps` and `n_ingredients` are quantitative variables, so no ordinal enc
   - R²: 0.0013435067205547213 → Very poor performance in terms of accurate predictions.
 
 Based on the high MAE and low R², the model does not seem very effective.
-The extremely low R² suggests that our model is predicting nearly none of the variance in `minutes` column
-One possible reason for this poor performance is that recipe preparation time might depend on more factors than just the number of steps and ingredients.
+The extremely low R² suggests that our model is predicting nearly none of the variance in the `minutes` column. One possible reason for this poor performance is that recipe preparation time might depend on more factors than just the number of steps and ingredients.
 
 ---
 
