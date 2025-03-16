@@ -99,7 +99,7 @@ For the bivariate analysis, we explored the relationship between the number of i
 ></iframe> 
 ### Interesting Aggregates
 
-We grouped the recipes by `n_ingredients`) and calculated three statistics:  
+We grouped the recipes by `n_ingredients` and calculated three statistics:  
 1. Average preparation time – The mean time (in minutes) required to prepare recipes with a given number of ingredients.  
 2. Average calorie count – The mean calorie content of recipes with that ingredient count.  
 3. Recipe count – The number of recipes that fall into each ingredient category.  
@@ -211,11 +211,11 @@ Our model plans to predict the **number of minutes to complete** for a recipe, w
 
 We evaluated the model using:
 1. Mean Absolute Error (MAE): Measures the average absolute differences between predicted and actual values. It is useful because it is interpretable in the same units as the target variable.
-2. R^2: This tells us the proportiong of variance in minutes that is accounted for by our model, showing how good of a fit our model is
+2. R^2: This tells us the proportion of variance in minutes that is accounted for by our model, showing how good of a fit our model is
 
 We choose these metrics over others because MAE gives a straightforward measure of average error magnitude, R^2 is good for generally telling how good of a fit a regression model is, and stats like RMSE are very sensitive to outliers.
 
-We are trying to predict how long it would take us to make a recipe, so all of the information we are using is everything you would be able to find while looking at a recipe except for the number of minutes the recipe says. This includes all of the steps, which may have clues as to how long it takes (20 minutes in the oven, for example) and any tags that the creator of the recipe has put on the recipe, which include things like "60-minutes-or-less"
+We are trying to predict how long it would take us to make a recipe, so all of the information we are using is everything you would be able to find while looking at a recipe, except for the number of minutes the recipe says. This includes all of the steps, which may have clues as to how long it takes (20 minutes in the oven, for example) and any tags that the creator of the recipe has put on the recipe, which include things like "60-minutes-or-less"
 
 ---
 
